@@ -111,8 +111,8 @@ section {
 }
 
 .project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
 }
 
 .project img {
@@ -121,20 +121,52 @@ section {
     margin-bottom: 15px;
 }
 
-/* ---------- SKILLS ---------- */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+/* ---------- SKILLS GRID ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
 
-.skill {
+.skills-box h3 {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.skills-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-box li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- GET IN TOUCH ---------- */
+.contact-box {
+    text-align: center;
+}
+
+.contact-box p {
+    margin-bottom: 20px;
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 26px;
     background: var(--accent);
     color: var(--dark);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* ---------- FOOTER ---------- */
@@ -156,6 +188,10 @@ footer {
 
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 </style>
@@ -182,8 +218,8 @@ footer {
             I am a passionate UI/UX designer with a strong foundation in Software Engineering
             and hands-on experience in designing intuitive, visually engaging digital experiences.
             I focus on creating clean, user-friendly interfaces that balance aesthetics and usability.
-            I enjoy transforming ideas into meaningful designs that make users feel comfortable,
-            confident, and connected.
+            I enjoy transforming ideas into meaningful designs that make users feel confident,
+            comfortable, and connected.
         </p>
     </div>
 </section>
@@ -214,26 +250,60 @@ footer {
 </section>
 
 <section>
-    <h2 class="section-title">Skills</h2>
-    <div class="card">
-        <div class="skills">
-            <span class="skill">UI/UX Design</span>
-            <span class="skill">Figma</span>
-            <span class="skill">Canva</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Manual Testing</span>
-            <span class="skill">GitHub</span>
+    <h2 class="section-title">Skills & Technologies</h2>
+
+    <div class="skills-grid">
+
+        <div class="card skills-box">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Laravel Framework</li>
+                <li>.NET Framework</li>
+                <li>React Native</li>
+                <li>C#, Java, Python, C, PHP</li>
+                <li>JavaScript, HTML, CSS</li>
+                <li>Tailwind CSS & Bootstrap</li>
+                <li>MS SQL Server, MySQL, Azure</li>
+                <li>Web & Application Servers (IIS, Tomcat)</li>
+                <li>GitHub, Postman</li>
+                <li>Agile Methodology (JIRA)</li>
+                <li>QA & Manual Testing</li>
+            </ul>
         </div>
+
+        <div class="card skills-box">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Leadership</li>
+                <li>Problem Solving & Logical Thinking</li>
+                <li>Teamwork</li>
+                <li>Time Management</li>
+                <li>Innovative Thinking</li>
+                <li>Adaptability</li>
+                <li>Effective Communication</li>
+                <li>Emotional Intelligence</li>
+                <li>Conflict Resolution</li>
+                <li>Professionalism</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
 <section>
-    <h2 class="section-title">Contact</h2>
-    <div class="card">
-        <p><strong>Email:</strong> yourname@email.com</p>
-        <p><strong>Location:</strong> Australia</p>
+    <h2 class="section-title">Get In Touch</h2>
+
+    <div class="card contact-box">
+        <p>
+            I’m always open to discussing new opportunities, creative projects,
+            or collaborations. Feel free to reach out — I’d love to connect.
+        </p>
+
+        <div class="contact-links">
+            <a href="mailto:yourname@email.com">Email Me</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
     </div>
 </section>
 
