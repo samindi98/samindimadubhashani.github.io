@@ -100,26 +100,33 @@ section {
 }
 
 /* ---------- PROJECTS ---------- */
+.projects-wrapper {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
 .projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
 }
 
 .project {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    min-width: 280px;   /* 3–4 cards per screen */
+    max-width: 280px;
+    flex-shrink: 0;
 }
 
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+/* Optional: nicer scrolling */
+.projects-wrapper::-webkit-scrollbar {
+    height: 8px;
 }
 
-.project img {
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 15px;
+.projects-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
 }
+
 
 /* ---------- SKILLS GRID ---------- */
 .skills-grid {
@@ -226,61 +233,50 @@ footer {
 
 <section>
     <h2 class="section-title">Projects</h2>
-    <div class="projects">
 
-        <div class="card project">
-            <img src="image
-/TravelUP.png" alt="TravelUP">
-            <h3>Travel Web Application</h3>
-            <p>
-                Designed user and driver interfaces for a multi-service taxi booking platform,
-                focusing on smooth navigation, clarity, and user trust.
-            </p>
-        </div>
+    <div class="projects-wrapper">
+        <div class="projects">
 
-        <div class="card project">
-            <img src="image/Screenshot 2025-12-23 151331.png" alt="Company Management System">
-            <h3>Company Management System</h3>
-            <p>
-                A mobile UI design project aimed at enhancing food discovery through
-                clean layouts, engaging visuals, and an intuitive user flow.
-            </p>
-        </div>
-        <div class="card project">
-            <img src="image/School Management System.png" alt="School Management System">
-            <h3>School Management System</h3>
-            <p>
-                A mobile UI design project aimed at enhancing food discovery through
-                clean layouts, engaging visuals, and an intuitive user flow.
-            </p>
-        </div>
-        <div class="card project">
-            <img src="image/TutorHQ.png" alt="Student Management System">
-            <h3>Student Management System</h3>
-            <p>
-                A mobile UI design project aimed at enhancing food discovery through
-                clean layouts, engaging visuals, and an intuitive user flow.
-            </p>
-        </div>
-        <div class="card project">
-            <img src="image/Hospital Management System.png" alt="Hospital Management System">
-            <h3>Hospital Management System</h3>
-            <p>
-                A mobile UI design project aimed at enhancing food discovery through
-                clean layouts, engaging visuals, and an intuitive user flow.
-            </p>
-        </div>
-        <div class="card project">
-            <img src="image/RestaurantPOS.png" alt="RestaurantPOS">
-            <h3>Restaurant POS System</h3>
-            <p>
-                A mobile UI design project aimed at enhancing food discovery through
-                clean layouts, engaging visuals, and an intuitive user flow.
-            </p>
-        </div>
+            <div class="card project">
+                <img src="image/TravelUP.png" alt="TravelUP">
+                <h3>Travel Web Application</h3>
+                <p>Designed user and driver interfaces for a multi-service taxi booking platform.</p>
+            </div>
 
+            <div class="card project">
+                <img src="image/Screenshot 2025-12-23 151331.png" alt="Company Management System">
+                <h3>Company Management System</h3>
+                <p>A mobile UI design project with clean layouts and intuitive flow.</p>
+            </div>
+
+            <div class="card project">
+                <img src="image/School Management System.png" alt="School Management System">
+                <h3>School Management System</h3>
+                <p>A mobile UI design project with clean layouts and intuitive flow.</p>
+            </div>
+
+            <div class="card project">
+                <img src="image/TutorHQ.png" alt="Student Management System">
+                <h3>Student Management System</h3>
+                <p>A mobile UI design project with clean layouts and intuitive flow.</p>
+            </div>
+
+            <div class="card project">
+                <img src="image/Hospital Management System.png" alt="Hospital Management System">
+                <h3>Hospital Management System</h3>
+                <p>A mobile UI design project with clean layouts and intuitive flow.</p>
+            </div>
+
+            <div class="card project">
+                <img src="image/RestaurantPOS.png" alt="Restaurant POS">
+                <h3>Restaurant POS System</h3>
+                <p>A mobile UI design project with clean layouts and intuitive flow.</p>
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <section>
     <h2 class="section-title">Skills & Technologies</h2>
