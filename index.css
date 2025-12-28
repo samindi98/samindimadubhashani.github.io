@@ -233,10 +233,10 @@ section {
 
 /* ---------- GET IN TOUCH ---------- */
 .contact-section {
-    display: grid;
+    
     grid-template-columns: 1fr;
     gap: 20px;
-    margin: 0 auto;
+   
 }
 
 .contact-text {
