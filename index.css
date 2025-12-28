@@ -1,0 +1,327 @@
+:root {
+    --primary: #000000;
+    --secondary: #574d4d;
+    --accent: #152720;
+    --dark: #2e2e3a;
+    --light: #fafbff;
+    --text: #444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: var(--dark);
+    color: rgb(158, 158, 158);
+    text-align: center;
+    padding: 50px 20px 50px;
+    
+}
+
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+header h1 {
+    margin: 18px 0 6px;
+    font-size: 1rem;
+    color: white;
+}
+
+header p {
+    font-size: 0.95rem;
+}
+
+.icon-buttons {
+    margin-top: 20px;
+}
+
+.icon-buttons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 6px;
+    background: white;
+    color: var(--dark);
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.icon-buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    color: var(--primary); /* optional: change icon color on hover */
+}
+
+
+/* ---------- SECTIONS ---------- */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 18px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+}
+
+/* -----------EXPERIENCE SECTION ---------- */
+
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.experience-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #b4b4b4;
+    
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.exp-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    color: var(--dark);
+}
+.exp-header h3 i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.company {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.exp-desc {
+    margin-top: 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+}
+
+
+/* ---------- PROJECTS ---------- */
+.projects {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+}
+
+/* Show 3–4 cards at a time */
+.project {
+    min-width: 400px;
+    max-width: 400px;
+    flex-shrink: 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect stays */
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+/* Image styling stays */
+.project img {
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+/* Optional: cleaner scrollbar */
+.projects::-webkit-scrollbar {
+    height: px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+
+/* ---------- SKILLS GRID ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.skills-box h3 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.skills-box ul {
+    list-style: disc;
+    padding: 0;
+}
+
+.skills-box li {
+    padding: 5px 0;
+    font-size: 0.95rem;
+}
+
+
+/* ---------- GET IN TOUCH ---------- */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-row input {
+    flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #f6f6f6;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-form textarea {
+    min-height: 180px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    background: #f0f0f0;
+}
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.8rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/* ---------- DESKTOP ---------- */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
